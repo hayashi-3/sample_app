@@ -7,10 +7,12 @@ class TodolistsController < ApplicationController
   	list = List.new(list_params)
   	list.save
   	redirect_to '/top'
-  	def index
+  	end
+     def index
+     end
   	  @lists = List.all
     end
-end
+
 private
 def list_params
 	params.require(:list).permit(:title, :body)
