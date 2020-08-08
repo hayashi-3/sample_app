@@ -9,7 +9,6 @@ class TodolistsController < ApplicationController
   	redirect_to '/top'
   	end
      def index
-     end
   	  @lists = List.all
     end
 
@@ -18,4 +17,5 @@ def list_params
 	params.require(:list).permit(:title, :body)
 end
 end
+
 
